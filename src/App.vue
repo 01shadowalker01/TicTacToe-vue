@@ -1,14 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <header>
+    <h1>Tic Tac Toe!</h1>
+    <Round :round="1" firstPlayerSymbol="X" secondplayerSymbol="O" />
+  </header>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
+import Round from "./components/Round.vue";
 
 export default defineComponent({
-  name: 'App',
-  components: {
-  }
+  name: "App",
+  components: { Round },
 });
 </script>
 
