@@ -1,11 +1,11 @@
 <template>
   <table>
-    <tr>
-      <td>Round</td>
-      <td v-for="score in scoreList" :key="score.round">
+    <thead>
+      <th>Round</th>
+      <th v-for="score in scoreList" :key="score.round">
         {{ score.round }}
-      </td>
-    </tr>
+      </th>
+    </thead>
     <tr>
       <td>P1</td>
       <td v-for="score in scoreList" :key="score.round">
@@ -35,4 +35,28 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #FFC200;
+  font-size: 1.15rem;
+
+  th {
+    background-color: #FA5C0C;
+    color: white;
+    width: 50%;
+  }
+
+  td,
+  th {
+    padding: 5px;
+    border: 0;
+  }
+
+  td {
+    border-bottom: 1px solid #bdb76b;
+  }
+}
+</style>
