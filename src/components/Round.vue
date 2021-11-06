@@ -1,10 +1,8 @@
 <template>
   <div class="wrapper">
     <h3>Round {{ round }}</h3>
-    <div>
-      <h4>Player 1: {{ firstPlayerSymbol }}</h4>
-      <h4>Player 2: {{ secondplayerSymbol }}</h4>
-    </div>
+    <h4>Player 1: {{ firstPlayerSymbol }}</h4>
+    <h4>Player 2: {{ secondplayerSymbol }}</h4>
   </div>
 </template>
 
@@ -20,12 +18,12 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .wrapper {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   flex: 1 0 50%;
+  justify-content: space-evenly;
 
   h3 {
     flex: 0 1 100%;
