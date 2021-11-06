@@ -19,11 +19,11 @@ export default defineComponent({
   data() {
     return {
       scoreList: [
-        { round: 1, firstPlayerWon: true },
-        { round: 2, firstPlayerWon: true },
-        { round: 3, firstPlayerWon: false },
-        { round: 4, firstPlayerWon: false },
-        { round: 5, firstPlayerWon: true },
+        { round: 1, result: "firstPlayerWon" },
+        { round: 2, result: "draw" },
+        { round: 3, result: "secondPlayerWon" },
+        { round: 4, result: "firstPlayerWon" },
+        { round: 5, result: "draw" },
       ],
     };
   },

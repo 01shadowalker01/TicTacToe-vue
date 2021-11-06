@@ -1,4 +1,4 @@
 export interface Score {
   round: number;
-  firstPlayerWon: boolean;
+  result: "firstPlayerWon" | "secondPlayerWon" | "draw";
 }

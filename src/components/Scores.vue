@@ -9,13 +9,15 @@
     <tr>
       <td>P1</td>
       <td v-for="score in scoreList" :key="score.round">
-        <span v-if="score.firstPlayerWon">X</span>
+        <span v-if="score.result == 'firstPlayerWon'">X</span>
+        <span v-else-if="score.result == 'draw'">-</span>
       </td>
     </tr>
     <tr>
       <td>P2</td>
       <td v-for="score in scoreList" :key="score.round">
-        <span v-if="!score.firstPlayerWon">O</span>
+        <span v-if="score.result == 'secondPlayerWon'">O</span>
+        <span v-else-if="score.result == 'draw'">-</span>
       </td>
     </tr>
   </table>
@@ -51,7 +53,7 @@ table {
 
   td,
   th {
-    padding: 5px;
+    padding: 8px 16px;
     border: 0;
   }
 
