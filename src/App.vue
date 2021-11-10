@@ -4,18 +4,23 @@
     <Round :round="1" firstPlayerSymbol="X" secondplayerSymbol="O" />
   </header>
   <main class="main-conetnt">
+    <GameBoard :cellStateList="cellStateList" />
     <Scores :scoreList="scoreList" />
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import GameBoard from "./components/GameBoard.vue";
 import Round from "./components/Round.vue";
 import Scores from "./components/Scores.vue";
+import { GameLogicService } from "./logic/game-logic-servie";
+
+let gameLogicService = new GameLogicService();
 
 export default defineComponent({
   name: "App",
-  components: { Round, Scores },
+  components: { Round, Scores, GameBoard },
   data() {
     return {
       scoreList: [
@@ -25,6 +30,7 @@ export default defineComponent({
         { round: 4, result: "firstPlayerWon" },
         { round: 5, result: "draw" },
       ],
+      cellStateList: gameLogicService.gameBoard,
     };
   },
 });
@@ -37,11 +43,16 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+header h1 {
+  margin-bottom: 0;
 }
 
 .main-conetnt {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  place-items: center;
 }
 </style>

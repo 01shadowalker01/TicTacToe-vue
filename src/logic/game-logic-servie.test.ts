@@ -5,11 +5,11 @@ import {
 } from "./game-logic-servie";
 
 describe("Game logic servie", () => {
-  let logicService: GameLogicService;
+  const logicService = new GameLogicService();
 
-  beforeEach(() => {
-    logicService = new GameLogicService();
-  });
+  // beforeEach(() => {
+  //   logicService = new GameLogicService();
+  // });
   describe("initial state", () => {
     it("shoud be a n*n array filled with -1 (default vaule)", () => {
       const _gameBoard = (() => {
