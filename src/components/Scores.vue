@@ -44,11 +44,11 @@ table {
   border-spacing: 0;
   background-color: #FFC200;
   font-size: 1.15rem;
+  width: 45%;
 
   th {
     background-color: #FA5C0C;
     color: white;
-    width: 50%;
   }
 
   td,

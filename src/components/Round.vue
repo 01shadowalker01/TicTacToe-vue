@@ -29,5 +29,9 @@ export default defineComponent({
     flex: 0 1 100%;
     align-self: center;
   }
+  h3,
+  h4 {
+    margin-bottom: 1vh;
+  }
 }
 </style>
